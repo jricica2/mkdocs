@@ -23,7 +23,7 @@ pip install mkdocs-material
 6. Run the script to activate the virtual environment. This script will need to be run every time you edit/make changes to the website.
 
 ```powershell
-	venv\Scripts\Activate.ps1
+venv\Scripts\Activate.ps1
 ```
 
 7. If you encounter an error about running scripts being disabled, you can run the following command and then run the Activate.ps1 script again
