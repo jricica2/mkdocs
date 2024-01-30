@@ -449,9 +449,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#procedure" class="md-nav__link">
+  <a href="#install-prerequisites-and-configure-postfix" class="md-nav__link">
     <span class="md-ellipsis">
-      Procedure
+      Install Prerequisites and Configure Postfix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixchange-the-from-name-from-root" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fix/Change the From: Name from "root"
     </span>
   </a>
   
@@ -532,7 +541,7 @@
 
 <h1 id="setting-up-email-alerts-in-proxmox">Setting up Email Alerts in Proxmox</h1>
 <p><a href="https://technotim.live/posts/proxmox-alerts/">https://technotim.live/posts/proxmox-alerts/</a></p>
-<h2 id="procedure">Procedure</h2>
+<h2 id="install-prerequisites-and-configure-postfix">Install Prerequisites and Configure Postfix</h2>
 <ol>
 <li>
 <p>Install prerequisites
@@ -594,6 +603,9 @@ Also comment out the existing <code>relayhost =</code> line</p>
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is a test message sent from postfix on my Proxmox Server&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>mail<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;Test Email from Proxmox&quot;</span><span class="w"> </span>your-email@gmail.com
 </code></pre></div></p>
 </li>
+</ol>
+<h2 id="fixchange-the-from-name-from-root">Fix/Change the From: Name from "root"</h2>
+<ol>
 <li>
 <p>To fix/change the From: name to show as something other than "root", update and install the PCRE pre-requisite
 <div class="highlight"><pre><span></span><code>apt<span class="w"> </span>update
