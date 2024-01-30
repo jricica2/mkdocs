@@ -42,8 +42,8 @@ theme:
 
     # Palette toggle for dark mode
     - scheme: slate
-      primary: green
-      accent: lime
+      primary: red
+      accent: red
       toggle:
         icon: material/brightness-4
         name: Switch to light mode

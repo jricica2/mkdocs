@@ -9,19 +9,16 @@
 2. Download and install Python for Windows
 3. Download and install VS Code (if you don't already have it)
 4. Set up a virtual environment for Python
-
 ```powershell
 python -m venv venv
 ```
 
 5. Install mkdocs-material
-
 ```powershell
 pip install mkdocs-material
 ```
 
 6. Run the script to activate the virtual environment. This script will need to be run every time you edit/make changes to the website.
-
 ```powershell
 venv\Scripts\Activate.ps1
 ```
@@ -32,13 +29,11 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 ```
 
 8. Open the website in VS Code by typing the following command:
-
 ```powershell
 code .
 ```
 
 9. Open a new terminal if one is not already open and run the following commands:
-
 ```powershell
 mkdocs new .
 ```
@@ -47,14 +42,12 @@ mkdocs serve
 ```
 
 10. Add the material theme to the mkdocs.yml file
-
 ```yml
 theme:
 	name: material
 ```
 
 11. Add the following to the mkdocs.yml file to add the light mode/dark mode toggle:
-
 ```yml
   palette: 
     # Palette toggle for light mode
@@ -75,7 +68,6 @@ theme:
 ```
 
 12. Add the following to the mkdocs.yml file to add necessary features and plugins:
-
 ```yml
   features:
     - content.code.annotate
