@@ -2,7 +2,7 @@
 
 [https://technotim.live/posts/proxmox-alerts/](https://technotim.live/posts/proxmox-alerts/)
 
-## Procedure
+## Install Prerequisites and Configure Postfix
 
 1. Install prerequisites
 ```bash
@@ -64,7 +64,9 @@ postfix reload
 echo "This is a test message sent from postfix on my Proxmox Server" | mail -s "Test Email from Proxmox" your-email@gmail.com
 ```
 
-11. To fix/change the From: name to show as something other than "root", update and install the PCRE pre-requisite
+## Fix/Change the From: Name from "root"
+
+1. To fix/change the From: name to show as something other than "root", update and install the PCRE pre-requisite
 ```bash
 apt update
 ```
@@ -72,7 +74,7 @@ apt update
 apt install postfix-pcre
 ```
 
-12. Edit the SMTP header checks file
+2. Edit the SMTP header checks file
 ```bash
 nano /etc/postfix/smtp_header_checks
 ```
@@ -81,32 +83,32 @@ nano /etc/postfix/smtp_header_checks
 ```
 The email address doesn't matter because it's going to get overwritten by RicicaHomelabLogs@gmail.com, so only the name will change.
 
-13. Hash the file
+3. Hash the file
 ```bash
 postmap hash:/etc/postfix/smtp_header_checks
 ```
 
-14. Check the contents of the hashed file
+4. Check the contents of the hashed file
 ```bash
 cat /etc/postfix/smtp_header_checks.db
 ```
 
-15. Edit the Postfix config file to add the smtp_header_checks parameter
+5. Edit the Postfix config file to add the smtp_header_checks parameter
 ```bash
 nano /etc/postfix/main.cf
 ```
 
-16. Add the smtp_header_checks parameter to the end of the file:
+6. Add the smtp_header_checks parameter to the end of the file:
 ```bash
 smtp_header_checks = pcre:/etc/postfix/smtp_header_checks
 ```
 
-17. Reload Postfix for the changes to take effect
+7. Reload Postfix for the changes to take effect
 ```bash
 postfix reload
 ```
 
-18. Re-use the previous command to verify the changes took effect
+8. Re-use the previous command to verify the changes took effect
 ```bash
 echo "This is a test message sent from postfix on my Proxmox Server" | mail -s "Test Email from Proxmox" your-email@gmail.com
 ```
