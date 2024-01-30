@@ -131,7 +131,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -406,6 +406,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -448,11 +452,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../../proxmox/emailalerts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up Email Alerts in Proxmox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../proxmox/proxmox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Proxmox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proxmox/setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post-Installation
   </span>
   
 
@@ -494,46 +540,46 @@
 <li>Download and install GitHub Desktop</li>
 <li>Download and install Python for Windows</li>
 <li>Download and install VS Code (if you don't already have it)</li>
-<li>Set up a virtual environment for Python</li>
-</ol>
+<li>
+<p>Set up a virtual environment for Python
 <div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">venv</span>
-</code></pre></div>
-<ol>
-<li>Install mkdocs-material</li>
-</ol>
+</code></pre></div></p>
+</li>
+<li>
+<p>Install mkdocs-material
 <div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">mkdocs-material</span>
-</code></pre></div>
-<ol>
-<li>Run the script to activate the virtual environment. This script will need to be run every time you edit/make changes to the website.</li>
-</ol>
+</code></pre></div></p>
+</li>
+<li>
+<p>Run the script to activate the virtual environment. This script will need to be run every time you edit/make changes to the website.
 <div class="highlight"><pre><span></span><code><span class="n">venv</span><span class="p">\</span><span class="n">Scripts</span><span class="p">\</span><span class="n">Activate</span><span class="p">.</span><span class="n">ps1</span>
-</code></pre></div>
-<ol>
-<li>If you encounter an error about running scripts being disabled, you can run the following command and then run the Activate.ps1 script again</li>
-</ol>
+</code></pre></div></p>
+</li>
+<li>
+<p>If you encounter an error about running scripts being disabled, you can run the following command and then run the Activate.ps1 script again
 <div class="highlight"><pre><span></span><code><span class="nb">Set-ExecutionPolicy</span> <span class="n">-ExecutionPolicy</span> <span class="n">RemoteSigned</span> <span class="n">-Scope</span> <span class="k">Process</span>
-</code></pre></div>
-<ol>
-<li>Open the website in VS Code by typing the following command:</li>
-</ol>
+</code></pre></div></p>
+</li>
+<li>
+<p>Open the website in VS Code by typing the following command:
 <div class="highlight"><pre><span></span><code><span class="n">code</span> <span class="p">.</span>
-</code></pre></div>
-<ol>
-<li>Open a new terminal if one is not already open and run the following commands:</li>
-</ol>
-<p><div class="highlight"><pre><span></span><code><span class="n">mkdocs</span> <span class="n">new</span> <span class="p">.</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Open a new terminal if one is not already open and run the following commands:
+<div class="highlight"><pre><span></span><code><span class="n">mkdocs</span> <span class="n">new</span> <span class="p">.</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="n">mkdocs</span> <span class="n">serve</span>
 </code></pre></div></p>
-<ol>
-<li>Add the material theme to the mkdocs.yml file</li>
-</ol>
+</li>
+<li>
+<p>Add the material theme to the mkdocs.yml file
 <div class="highlight"><pre><span></span><code>theme:
     name: material
-</code></pre></div>
-<ol>
-<li>Add the following to the mkdocs.yml file to add the light mode/dark mode toggle:</li>
-</ol>
+</code></pre></div></p>
+</li>
+<li>
+<p>Add the following to the mkdocs.yml file to add the light mode/dark mode toggle:
 <div class="highlight"><pre><span></span><code>  palette: 
     # Palette toggle for light mode
     - scheme: default
@@ -550,10 +596,10 @@
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-</code></pre></div>
-<ol>
-<li>Add the following to the mkdocs.yml file to add necessary features and plugins:</li>
-</ol>
+</code></pre></div></p>
+</li>
+<li>
+<p>Add the following to the mkdocs.yml file to add necessary features and plugins:
 <div class="highlight"><pre><span></span><code>  features:
     - content.code.annotate
     - content.code.copy
@@ -575,7 +621,9 @@
   plugins:
     - typeset
     - search
-</code></pre></div>
+</code></pre></div></p>
+</li>
+</ol>
 
 
 
