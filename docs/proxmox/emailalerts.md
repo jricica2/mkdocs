@@ -2,6 +2,8 @@
 
 [https://technotim.live/posts/proxmox-alerts/](https://technotim.live/posts/proxmox-alerts/)
 
+## Procedure
+
 1. Install prerequisites
 ```bash
 apt update
