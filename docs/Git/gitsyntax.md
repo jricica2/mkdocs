@@ -236,13 +236,10 @@ pattern*/
 
 With platform specific installers for Git, GitHub also provides the ease of staying up-to-date with the latest releases of the command line tool while providing a graphical user interface for day-to-day interaction, review, and repository synchronization.
 
-**GitHub for Windows**  
-https://windows.github.com
+**GitHub for Windows:** <a href="https://windows.github.com" target="_blank">https://windows.github.com</a>
 
-**GitHub for Mac**  
-https://mac.github.com
+**GitHub for Mac:** <a href="https://mac.github.com" target="_blank">https://mac.github.com</a>
 
-For Linux and Solaris platforms, the latest release is available on the official Git web site.
+For **Linux and Solaris platforms**, the latest release is available on the official Git web site.
 
-**Git for All Platforms**  
-http://git-scm.com
+**Git for All Platforms:** <a href="http://git-scm.com" target="_blank">http://git-scm.com</a>
