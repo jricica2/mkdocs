@@ -20,5 +20,21 @@ The steps below are for enabling quick SSH access to a machine on your Tailnet w
 
 4. If you lose SSH, simply re-initiate the connection `ssh admin@machine` and it should not prompt for a password.
 
+5. If you are prompted to authenticate via a Tailscale URL in your browser and you do NOT want to do this every time, in the Tailscale Admin Console you will need to click the Access Control tab and edit the text configuration to update from `"action": "check",` to `"action": "accept",` and comment out the line that dictates how often to check:
+
+    ```
+    // Define users and devices that can use Tailscale SSH.
+	"ssh": [
+		// Allow all users to SSH into their own devices in check mode.
+		// Comment this section out if you want to define specific restrictions.
+		{
+			"action": "accept",
+			"src":    ["autogroup:member"],
+			"dst":    ["autogroup:self"],
+			"users":  ["autogroup:nonroot", "root"],
+			// "checkPeriod": "12h",
+		},
+	],
+    ```
 
 5. If you did not lose SSH, close and re-connect using the Tailscale DNS name or IP address and it should not prompt for a password.
