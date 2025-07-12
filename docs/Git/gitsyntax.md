@@ -6,7 +6,7 @@ Git is the free and open source distributed version control system that's respon
 
 ## Setup
 
-Configuring user information used across all local repositories
+### Configuring user information used across all local repositories
 
 ```bash
 git config --global user.name "[firstname lastname]"
@@ -25,7 +25,7 @@ set automatic command line coloring for Git for easy reviewing
 
 ## Setup & Init
 
-Configuring user information, initializing and cloning repositories
+### Configuring user information, initializing and cloning repositories
 
 ```bash
 git init
@@ -39,7 +39,7 @@ retrieve an entire repository from a hosted location via URL
 
 ## Stage & Snapshot
 
-Working with snapshots and the Git staging area
+### Working with snapshots and the Git staging area
 
 ```bash
 git status
@@ -73,7 +73,7 @@ commit your staged content as a new commit snapshot
 
 ## Branch & Merge
 
-Isolating work in branches, changing context, and integrating changes
+### Isolating work in branches, changing context, and integrating changes
 
 ```bash
 git branch
@@ -102,7 +102,7 @@ show all commits in the current branch's history
 
 ## Share & Update
 
-Retrieving updates from another repository and updating local repos
+### Retrieving updates from another repository and updating local repos
 
 ```bash
 git remote add [alias] [url]
@@ -131,7 +131,7 @@ fetch and merge any commits from the tracking remote branch
 
 ## Inspect & Compare
 
-Examining logs, diffs and object information
+### Examining logs, diffs and object information
 
 ```bash
 git log
@@ -160,7 +160,7 @@ show any object in Git in human-readable format
 
 ## Tracking Path Changes
 
-Versioning file removes and path changes
+### Versioning file removes and path changes
 
 ```bash
 git rm [file]
@@ -179,7 +179,7 @@ show all commit logs with indication of any paths that moved
 
 ## Rewrite History
 
-Rewriting branches, updating commits and clearing history
+### Rewriting branches, updating commits and clearing history
 
 ```bash
 git rebase [branch]
@@ -193,7 +193,7 @@ clear staging area, rewrite working tree from specified commit
 
 ## Temporary Commits
 
-Temporarily store modified, tracked files in order to change branches
+### Temporarily store modified, tracked files in order to change branches
 
 ```bash
 git stash
@@ -217,7 +217,7 @@ discard the changes from top of stash stack
 
 ## Ignoring Patterns
 
-Preventing unintentional staging or committing of files
+### Preventing unintentional staging or committing of files
 
 ```bash
 git config --global core.excludesfile [file]
