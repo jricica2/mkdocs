@@ -37,4 +37,4 @@ The steps below are for enabling quick SSH access to a machine on your Tailnet w
 	],
     ```
 
-5. If you did not lose SSH, close and re-connect using the Tailscale DNS name or IP address and it should not prompt for a password.
+6. If you did not lose SSH, close and re-connect using the Tailscale DNS name or IP address and it should not prompt for a password.
